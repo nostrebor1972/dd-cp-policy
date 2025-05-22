@@ -12,7 +12,7 @@ jobs:
       - name: Print environment variables
         run: |
           echo "Environment variables:"
-          env | grep CHECKPOINT_
+          env
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
