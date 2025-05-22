@@ -8,3 +8,23 @@ output "hosts" {
     value = local.hosts
 }
 
+
+#   "google_dns" = {
+#     "color" = "blue"
+#     "ip" = "8.8.8.8"
+#     "name" = "google_dns"
+#     "tags" = [
+#       "dns",
+#       "google",
+#     ]
+#   }
+resource "checkpoint_management_host" "hosts" {
+  for_each = local.hosts
+
+  name = each.value.name
+  ipv4_address  = each.value.ip_address
+
+    color = each.value.color
+    tags = concat(each.value.tags, ["terraform"])
+    
+}
