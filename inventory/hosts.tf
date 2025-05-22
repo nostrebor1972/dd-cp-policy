@@ -4,9 +4,9 @@ locals {
   hosts      = { for host in local.hosts_file.hosts : host.name => host }
 }
 
-output "hosts" {
-  value = local.hosts
-}
+# output "hosts" {
+#   value = local.hosts
+# }
 
 
 #   "google_dns" = {
