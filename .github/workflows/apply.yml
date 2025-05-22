@@ -31,7 +31,6 @@ jobs:
       - name: Terraform init inventory
         run: |
           cd inventory
-          terraform init
           echo terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT_NAME" \
             -backend-config="container_name=$BLOB_CONTAINER_NAME" \
             -backend-config="key=$STATE_FILE" \
