@@ -43,6 +43,9 @@ jobs:
 
       - name: Terraform apply inventory
         run: cd inventory; terraform apply -auto-approve
-      - name: Terraform destroy inventory
-        run: cd inventory; terraform destroy -auto-approve
+      - name: Publish policy
+        run: |
+          cd inventory; ../scripts/publish.sh
+      # - name: Terraform destroy inventory
+      #   run: cd inventory; terraform destroy -auto-approve
         
