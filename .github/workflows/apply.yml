@@ -4,12 +4,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  print-env:
+  objects:
     runs-on: ubuntu-latest
     env:
       CHECKPOINT_API_KEY: ${{ secrets.CHECKPOINT_API_KEY }}
       CHECKPOINT_CLOUD_MGMT_ID: ${{ secrets.CHECKPOINT_CLOUD_MGMT_ID }}
       CHECKPOINT_SERVER: ${{ secrets.CHECKPOINT_SERVER }}
+      STORAGE_ACCOUNT_NAME: ${{ secrets.STORAGE_ACCOUNT_NAME }}
+      BLOB_CONTAINER_NAME: ${{ secrets.BLOB_CONTAINER_NAME }}
+      ACCOUNT_KEY: ${{ secrets.ACCOUNT_KEY }}
+      STATE_FILE: ${{ secrets.STATE_FILE }}
 
     steps:
       - name: Checkout repository
@@ -25,7 +29,18 @@ jobs:
       - name: Terraform version
         run: terraform version
       - name: Terraform init inventory
-        run: cd inventory; terraform init
+        run: |
+          cd inventory
+          terraform init
+          echo terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT_NAME" \
+            -backend-config="container_name=$BLOB_CONTAINER_NAME" \
+            -backend-config="key=$STATE_FILE" \
+            -backend-config="access_key=$ACCOUNT_KEY" 
+          terraform init -backend-config="storage_account_name=$STORAGE_ACCOUNT_NAME" \
+            -backend-config="container_name=$BLOB_CONTAINER_NAME" \
+            -backend-config="key=$STATE_FILE" \
+            -backend-config="access_key=$ACCOUNT_KEY" 
+
       - name: Terraform apply inventory
         run: cd inventory; terraform apply -auto-approve
       - name: Terraform destroy inventory
