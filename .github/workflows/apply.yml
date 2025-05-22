@@ -1,0 +1,21 @@
+name: Apply
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Print environment variables
+        run: |
+          echo "Environment variables:"
+          env
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 'latest'
+      - name: Terraform version
+        run: terraform version
