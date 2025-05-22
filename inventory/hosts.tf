@@ -27,4 +27,5 @@ resource "checkpoint_management_host" "hosts" {
   color = each.value.color
   tags  = concat(each.value.tags, ["terraform"])
 
+  comments = lookup(each.value, "comment", null)
 }

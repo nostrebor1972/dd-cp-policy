@@ -12,3 +12,10 @@ hosts:
     tags:
       - dns
       - cloudflare
+  - name: google_dns2
+    ip: 8.8.4.4
+    color: blue
+    tags:
+      - dns
+      - google
+    comment: one more Google DNS server
