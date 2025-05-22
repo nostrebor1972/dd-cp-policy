@@ -19,3 +19,10 @@ hosts:
       - dns
       - google
     comment: one more Google DNS server
+  - name: o2_dns
+    ip: 194.228.2.1
+    color: blue
+    tags:
+      - dns
+      - o2
+    comment: you know
