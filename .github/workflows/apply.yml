@@ -24,3 +24,10 @@ jobs:
           terraform_version: 'latest'
       - name: Terraform version
         run: terraform version
+      - name: Terraform init
+        run: terraform init
+      - name: Terraform apply
+        run: terraform apply -auto-approve
+      - name: Terraform destroy
+        run: terraform destroy -auto-approve
+        
