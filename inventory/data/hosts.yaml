@@ -1,5 +1,13 @@
 
 hosts:
+  - name: servac
+    ip: 10.10.1.103
+    color: orange
+    tags:
+      - other
+      - frozen
+    comment: test
+
   - name: google_dns
     ip: 8.8.8.8
     color: blue
