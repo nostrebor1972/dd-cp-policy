@@ -24,10 +24,10 @@ jobs:
           terraform_version: 'latest'
       - name: Terraform version
         run: terraform version
-      - name: Terraform init
-        run: terraform init
-      - name: Terraform apply
-        run: terraform apply -auto-approve
-      - name: Terraform destroy
-        run: terraform destroy -auto-approve
+      - name: Terraform init inventory
+        run: cd inventory; terraform init
+      - name: Terraform apply inventory
+        run: cd inventory; terraform apply -auto-approve
+      - name: Terraform destroy inventory
+        run: cd inventory; terraform destroy -auto-approve
         
