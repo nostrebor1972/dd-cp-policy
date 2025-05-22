@@ -9,15 +9,7 @@ locals {
 # }
 
 
-#   "google_dns" = {
-#     "color" = "blue"
-#     "ip" = "8.8.8.8"
-#     "name" = "google_dns"
-#     "tags" = [
-#       "dns",
-#       "google",
-#     ]
-#   }
+
 resource "checkpoint_management_host" "hosts" {
   for_each = local.hosts
 

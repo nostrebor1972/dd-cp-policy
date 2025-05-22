@@ -1,10 +1,7 @@
-name: Apply
+name: Destroy
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   objects:
@@ -35,9 +32,9 @@ jobs:
             -backend-config="key=$STATE_FILE" \
             -backend-config="access_key=$ACCOUNT_KEY" 
 
-      - name: Terraform apply inventory
-        run: cd inventory; terraform apply -auto-approve
-        
+      - name: Terraform destroy inventory
+        run: cd inventory; terraform destroy -auto-approve
+
       - name: Publish policy
         run: |
           cd inventory; ../scripts/publish.sh
