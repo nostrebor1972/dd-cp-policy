@@ -7,6 +7,14 @@ hosts:
       - other
       - frozen
     comment: test
+    
+  - name: bonifac
+    ip: 10.10.1.109
+    color: red
+    tags:
+      - other
+      - frozen
+    comment: test
 
   - name: google_dns
     ip: 8.8.8.8
