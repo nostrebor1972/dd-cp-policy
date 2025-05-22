@@ -6,13 +6,18 @@ on:
 jobs:
   print-env:
     runs-on: ubuntu-latest
+    env:
+      CHECKPOINT_API_KEY: ${{ secrets.CHECKPOINT_API_KEY }}
+      CHECKPOINT_CLOUD_MGMT_ID: ${{ secrets.CHECKPOINT_CLOUD_MGMT_ID }}
+      CHECKPOINT_SERVER: ${{ secrets.CHECKPOINT_SERVER }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Print environment variables
         run: |
           echo "Environment variables:"
-          env
+          env | grep CHECKPOINT_
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
