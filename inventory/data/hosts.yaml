@@ -9,7 +9,7 @@ hosts:
     comment: test
   
   - name: pankrac
-    ip: 10.10.1.109
+    ip: 10.10.1.119
     color: pink
     tags:
       - other
