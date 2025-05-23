@@ -23,7 +23,16 @@ hosts:
       - other
       - frozen
     comment: test
-    
+
+  - name: servac4
+    ip: 10.10.1.55
+    color: pink
+    tags:
+      - other
+      - martas
+      - frozen
+    comment: test
+
   - name: dev1
     ip: 10.20.1.103
     color: red
