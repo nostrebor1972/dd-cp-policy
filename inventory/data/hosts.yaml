@@ -23,12 +23,12 @@ hosts:
       - dns
       - google
 
-  - name: cloudflare_dns
-    ip: 1.1.1.1
-    color: orange
-    tags:
-      - dns
-      - cloudflare
+  # - name: cloudflare_dns
+  #   ip: 1.1.1.1
+  #   color: orange
+  #   tags:
+  #     - dns
+  #     - cloudflare
 
   - name: google_dns2
     ip: 8.8.4.4
