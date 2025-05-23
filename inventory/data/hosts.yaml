@@ -7,7 +7,14 @@ hosts:
       - other
       - frozen
     comment: test
-  
+    
+  - name: dev1
+    ip: 10.20.1.103
+    color: red
+    tags:
+      - dev
+    comment: developers
+    
   # - name: pankrac
   #   ip: 10.10.1.119
   #   color: pink
