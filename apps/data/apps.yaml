@@ -1,6 +1,25 @@
 
 apps:
+  - name: books_app
+    services:
+      - name: "web"
+        services:
+          - https
+          - http
+        scope:
+          - net_books
+        consumers:
+          - feed-tech
+          - servac3
 
+      - name: db
+        services:
+          - MS-SQL-Server
+        scope:
+          - net_books_db
+        consumers:
+          - net_books    
+                
   - name: sales
     services:
       - name: "sales-web"
