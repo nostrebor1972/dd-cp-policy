@@ -6,6 +6,6 @@ apply:
 	../scripts/publish.sh
 
 down:
-	../scripts/tfinit-with-state.sh
+	../scripts/tfinit.sh
 	terraform destroy -auto-approve
 	

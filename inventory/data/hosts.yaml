@@ -16,12 +16,13 @@ hosts:
       - frozen
     comment: test
 
-  # - name: google_dns
-  #   ip: 8.8.8.8
-  #   color: blue
-  #   tags:
-  #     - dns
-  #     - google
+  - name: google_dns
+    ip: 8.8.8.8
+    color: blue
+    tags:
+      - dns
+      - google
+      
   - name: cloudflare_dns
     ip: 1.1.1.1
     color: orange
