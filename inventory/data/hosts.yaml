@@ -23,13 +23,13 @@ hosts:
       - dev
     comment: developers
     
-  # - name: pankrac
-  #   ip: 10.10.1.119
-  #   color: pink
-  #   tags:
-  #     - other
-  #     - frozen
-  #   comment: test
+  - name: pankrac
+    ip: 10.10.1.119
+    color: pink
+    tags:
+      - other
+      - frozen
+    comment: test
 
   - name: bonifac
     ip: 10.10.1.109
