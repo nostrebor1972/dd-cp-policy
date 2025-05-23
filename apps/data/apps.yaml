@@ -8,7 +8,7 @@ apps:
           - https
           - http
         scope:
-          - net_website
+          - net_sales
         consumers:
           - feed-sales
 
