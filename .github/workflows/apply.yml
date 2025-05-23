@@ -17,7 +17,7 @@ jobs:
       BLOB_CONTAINER_NAME: ${{ secrets.BLOB_CONTAINER_NAME }}
       ACCOUNT_KEY: ${{ secrets.ACCOUNT_KEY }}
       STATE_FILE: ${{ secrets.STATE_FILE }}
-
+      CHECKPOINT_SESSION_NAME: GitHub Actions ${{ github.run_id }} $(date +'%Y-%m-%dT%H:%M:%SZ')
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,7 +29,6 @@ jobs:
 
       - name: Terraform init inventory
         run: |
-          export CHECKPOINT_SESSION_NAME="GitHub Actions $(date) $(hostname)"
           cd inventory
           ../scripts/tfinit.sh
 
