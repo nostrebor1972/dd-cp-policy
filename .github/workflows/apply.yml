@@ -33,7 +33,7 @@ jobs:
           ../scripts/tfinit.sh
 
       - name: Terraform apply inventory
-        run: cd inventory; terraform apply -auto-approve
+        run: cd inventory; ../scripts/apply.sh
         
       - name: Publish policy
         run: |
