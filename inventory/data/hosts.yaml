@@ -7,7 +7,15 @@ hosts:
       - other
       - frozen
     comment: test
-    
+  
+  - name: pankrac
+    ip: 10.10.1.109
+    color: pink
+    tags:
+      - other
+      - frozen
+    comment: test
+
   - name: bonifac
     ip: 10.10.1.109
     color: red
