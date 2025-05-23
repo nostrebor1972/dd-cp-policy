@@ -18,7 +18,7 @@ jobs:
       ACCOUNT_KEY: ${{ secrets.ACCOUNT_KEY }}
       # STATE_FILE: ${{ secrets.STATE_FILE }}
       CHECKPOINT_SESSION_NAME: GitHub Actions ${{ github.run_id }}
-      CHECKPOINT_SESSION_DESCRIPTION: ${{ github.event_name }}  ${{ github.workflow }} - ${{ github.run_id }}
+      CHECKPOINT_SESSION_DESCRIPTION: ${{ github.event_name }}  ${{ github.workflow }} - ${{ github.run_id }} ${{ github.event.head_commit.message }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
