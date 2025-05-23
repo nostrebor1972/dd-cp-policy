@@ -9,5 +9,5 @@ terraform {
 
 provider "checkpoint" {
   # Configuration options
-  session_name = "terraform"
+  # session_name = "terraform"
 }

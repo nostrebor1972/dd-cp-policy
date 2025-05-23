@@ -29,6 +29,7 @@ jobs:
 
       - name: Terraform init inventory
         run: |
+          export CHECKPOINT_SESSION_NAME="GitHub Actions $(date) $(hostname)"
           cd inventory
           ../scripts/tfinit.sh
 

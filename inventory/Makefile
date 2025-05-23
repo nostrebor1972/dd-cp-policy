@@ -1,13 +1,17 @@
 
+
+export CHECKPOINT_SESSION_NAME := TF $(shell date) $(shell hostname)
+export CHECKPOINT_SESSION_DESCRIPTION := Terraform session description
+
 apply:
+	rm sid.json || true
 	../scripts/tfinit.sh
 	../scripts/validate.sh
 	../scripts/apply.sh
 	../scripts/publish.sh
 
 down:
-	../scripts/tfinit.sh
 	rm sid.json || true
-	export CHECKPOINT_SESSION_NAME="Manual TF Destroy $$(date)"
+	../scripts/tfinit.sh
 	terraform destroy -auto-approve
 	

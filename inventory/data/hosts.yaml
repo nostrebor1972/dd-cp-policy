@@ -22,7 +22,7 @@ hosts:
     tags:
       - dns
       - google
-      
+
   - name: cloudflare_dns
     ip: 1.1.1.1
     color: orange
