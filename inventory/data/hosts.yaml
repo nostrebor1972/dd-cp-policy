@@ -2,7 +2,7 @@
 hosts:
   - name: servac
     ip: 10.10.1.103
-    color: orange
+    color: red
     tags:
       - other
       - frozen
@@ -10,7 +10,7 @@ hosts:
 
   - name: servac2
     ip: 10.10.1.222
-    color: red
+    color: blue
     tags:
       - other
       - frozen
