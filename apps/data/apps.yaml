@@ -1,0 +1,37 @@
+
+apps:
+  - name: "car_sharing"
+    services:
+      - name: "frontend"
+        services:
+          - https
+        scope:
+          - net-10
+          - bonifac
+        consumers:
+          - net-100
+      - name: "app"
+        services:
+          - https
+        scope:
+          - net-100
+        consumers:
+          - net-10          
+      - name: "db"
+        services:
+          - MS-SQL-Server
+        scope:
+          - servac
+        consumers:
+          - net-100
+  - name: "expense_tracker"
+    services:
+      - name: "frontend"
+        services:
+          - https
+          - http
+        scope:
+          - net-10
+          - servac
+        consumers:
+          - net-100
