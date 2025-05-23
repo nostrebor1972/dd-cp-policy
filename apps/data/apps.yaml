@@ -1,7 +1,34 @@
 
 apps:
+  - name: cars
+    services:
+      - name: "publicweb"
+        services:
+          - https
+        scope:
+          - net_cars_publicweb
+        consumers:
+          - Any
+
+      - name: test
+        services:
+          - https
+        scope:
+          - net_cars_test
+        consumers:
+          - feed-test
+
   - name: books_app
     services:
+
+      - name: "public"
+        services:
+          - https
+        scope:
+          - net_books
+        consumers:
+          - Any
+
       - name: "web"
         services:
           - https
