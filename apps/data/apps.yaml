@@ -1,5 +1,28 @@
 
 apps:
+
+  - name: sales
+    services:
+      - name: "sales-web"
+        services:
+          - https
+          - http
+        scope:
+          - net_website
+        consumers:
+          - feed-sales
+
+  - name: www
+    services:
+      - name: "website"
+        services:
+          - https
+          - http
+        scope:
+          - net_website
+        consumers:
+          - Any
+
   - name: "car_sharing"
     services:
       - name: "frontend"
@@ -31,7 +54,14 @@ apps:
           - https
           - http
         scope:
-          - net-10
-          - servac
+          - net_expense_frontend
         consumers:
-          - net-100
+          - Any
+      - name: "backend"
+        services:
+          - https
+          - http
+        scope:
+          - net_expense_backend
+        consumers:
+          - net_expense_frontend
