@@ -17,3 +17,14 @@ echo $STATE_FILE | gh secret set STATE_FILE --repo mkol5222/dd-cp-policy
 
 
 ```
+
+Inventory UI
+
+https://docs.google.com/spreadsheets/d/1AxnotD9U9kKOluFNRFPQoddXRg4ffVHaamdDIj31UhM/edit?gid=0#gid=0
+
+GSheet JSON
+```shell
+curl -s https://opensheet.elk.sh/1AxnotD9U9kKOluFNRFPQoddXRg4ffVHaamdDIj31UhM/feed | jq .
+
+curl -s https://opensheet.elk.sh/1AxnotD9U9kKOluFNRFPQoddXRg4ffVHaamdDIj31UhM/feed | jq -r '.[].ip'
+````
