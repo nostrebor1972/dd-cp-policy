@@ -35,9 +35,10 @@ hosts:
 
   - name: dev1
     ip: 10.20.1.103
-    color: red
+    color: green
     tags:
       - dev
+      - dev2
     comment: developers
     
   - name: pankrac

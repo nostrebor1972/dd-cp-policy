@@ -2,7 +2,9 @@
 apply:
 	cd ./inventory && make apply
 	cd ./apps && make apply
-destroy:
-	cd ./apps && make destroy
-	cd ./inventory && make destroy
+down:
+	cd ./apps && make down
+	cd ./apps && ../scripts/publish.sh
+	cd ./inventory && make down
+	cd ./inventory && ../scripts/publish.sh
 	

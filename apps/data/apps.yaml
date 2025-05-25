@@ -10,89 +10,89 @@ apps:
         consumers:
           - Any
 
-      - name: test
-        services:
-          - https
-        scope:
-          - net_cars_test
-        consumers:
-          - feed-test
+  #     - name: test
+  #       services:
+  #         - https
+  #       scope:
+  #         - net_cars_test
+  #       consumers:
+  #         - feed-test
 
-  - name: books_app
-    services:
+  # - name: books_app
+  #   services:
 
-      - name: "public"
-        services:
-          - https
-        scope:
-          - net_books
-        consumers:
-          - Any
+  #     - name: "public"
+  #       services:
+  #         - https
+  #       scope:
+  #         - net_books
+  #       consumers:
+  #         - Any
 
-      - name: "web"
-        services:
-          - https
-          - http
-        scope:
-          - net_books
-        consumers:
-          - feed-tech
-          - servac3
+  #     - name: "web"
+  #       services:
+  #         - https
+  #         - http
+  #       scope:
+  #         - net_books
+  #       consumers:
+  #         - feed-tech
+  #         - servac3
 
-      - name: db
-        services:
-          - MS-SQL-Server
-        scope:
-          - net_books_db
-        consumers:
-          - net_books    
+  #     - name: db
+  #       services:
+  #         - MS-SQL-Server
+  #       scope:
+  #         - net_books_db
+  #       consumers:
+  #         - net_books    
                 
-  - name: sales
-    services:
-      - name: "sales-web"
-        services:
-          - https
-          - http
-        scope:
-          - net_sales
-        consumers:
-          - feed-sales
+  # - name: sales
+  #   services:
+  #     - name: "sales-web"
+  #       services:
+  #         - https
+  #         - http
+  #       scope:
+  #         - net_sales
+  #       consumers:
+  #         - feed-sales
 
-  - name: www
-    services:
-      - name: "website"
-        services:
-          - https
-          - http
-        scope:
-          - net_website
-        consumers:
-          - Any
+  # - name: www
+  #   services:
+  #     - name: "website"
+  #       services:
+  #         - https
+  #         - http
+  #       scope:
+  #         - net_website
+  #       consumers:
+  #         - Any
 
-  - name: "car_sharing"
-    services:
-      - name: "frontend"
-        services:
-          - https
-        scope:
-          - net-10
-          - bonifac
-        consumers:
-          - net-100
-      - name: "app"
-        services:
-          - https
-        scope:
-          - net-100
-        consumers:
-          - net-10          
-      - name: "db"
-        services:
-          - MS-SQL-Server
-        scope:
-          - servac
-        consumers:
-          - net-100
+  # - name: "car_sharing"
+  #   services:
+  #     - name: "frontend"
+  #       services:
+  #         - https
+  #       scope:
+  #         - net-10
+  #         - bonifac
+  #       consumers:
+  #         - net-100
+  #     - name: "app"
+  #       services:
+  #         - https
+  #       scope:
+  #         - net-100
+  #       consumers:
+  #         - net-10          
+  #     - name: "db"
+  #       services:
+  #         - MS-SQL-Server
+  #       scope:
+  #         - servac
+  #       consumers:
+  #         - net-100
   - name: "expense_tracker"
     services:
       - name: "frontend"
