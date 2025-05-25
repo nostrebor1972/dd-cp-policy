@@ -5,7 +5,7 @@ data "http" "feeds" {
   url = "https://opensheet.elk.sh/1AxnotD9U9kKOluFNRFPQoddXRg4ffVHaamdDIj31UhM/feeds"
 }
 locals {
-  feeds = jsondecode(data.http.feeds.body)
+  feeds = jsondecode(data.http.feeds.response_body)
 }
 
 resource "checkpoint_management_network_feed" "feeds" {

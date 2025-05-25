@@ -5,7 +5,7 @@ data "http" "networks" {
   url = "https://opensheet.elk.sh/1AxnotD9U9kKOluFNRFPQoddXRg4ffVHaamdDIj31UhM/networks"
 }
 locals {
-  networks = jsondecode(data.http.networks.body)
+  networks = jsondecode(data.http.networks.response_body)
 }
 
 resource "checkpoint_management_network" "networks" {
