@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  objects:
+  sync-policy:
     runs-on: ubuntu-latest
     env:
       CHECKPOINT_API_KEY: ${{ secrets.CHECKPOINT_API_KEY }}
