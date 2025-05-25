@@ -1,5 +1,13 @@
 
 hosts:
+  - name: hurvinek
+    ip: 10.10.1.203
+    color: yellow
+    tags:
+      - other
+      - skupa
+    comment: test
+    
   - name: servac
     ip: 10.10.1.103
     color: red
