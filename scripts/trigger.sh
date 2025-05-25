@@ -3,8 +3,8 @@
 #!/bin/bash
 
 # stop if no GITHUB_TOKEN is set
-if [ -z "$GITHUB_TOKEN" ]; then
-  echo "Error: GITHUB_TOKEN is not set. Please set it before running this script."
+if [ -z "$TRIGGER_GITHUB_TOKEN" ]; then
+  echo "Error: TRIGGER_GITHUB_TOKEN is not set. Please set it before running this script."
   exit 1
 fi
 
@@ -18,9 +18,8 @@ REF="main"  # Branch or tag name
 INPUTS='{}'  # Optional workflow inputs, or leave empty '{}'
 
 # ==== API CALL ====
-curl -s -X POST \
-  -H "Authorization: Bearer $GITHUB_TOKEN" \
+curl -v  -X POST \
+  -H "Authorization: Bearer $TRIGGER_GITHUB_TOKEN" \
   -H "Accept: application/vnd.github+json" \
   https://api.github.com/repos/$OWNER/$REPO/actions/workflows/$WORKFLOW_FILE/dispatches \
-  -d "$(jq -n --arg ref "$REF" --argjson inputs "$INPUTS" '{ref: $ref, inputs: $inputs}')" \
-  | jq .
+  -d "$(jq -n --arg ref "$REF" --argjson inputs "$INPUTS" '{ref: $ref, inputs: $inputs}')" 
