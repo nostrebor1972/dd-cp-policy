@@ -42,5 +42,5 @@ jobs:
       
       - name: APP POLICY make
         run: |
-          cd apps; ../scripts/make.sh
+          cd apps; make
         
