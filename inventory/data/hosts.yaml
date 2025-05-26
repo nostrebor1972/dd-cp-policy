@@ -23,98 +23,98 @@ hosts:
       - skupa
     comment: test
 
-  - name: servac
-    ip: 10.10.1.103
-    color: red
-    tags:
-      - other
-      - frozen
-    comment: test
+  # - name: servac
+  #   ip: 10.10.1.103
+  #   color: red
+  #   tags:
+  #     - other
+  #     - frozen
+  #   comment: test
 
-  - name: servac2
-    ip: 10.10.1.222
-    color: blue
-    tags:
-      - other
-      - frozen
-    comment: test
+  # - name: servac2
+  #   ip: 10.10.1.222
+  #   color: blue
+  #   tags:
+  #     - other
+  #     - frozen
+  #   comment: test
     
-  - name: servac3
-    ip: 10.10.1.33
-    color: blue
-    tags:
-      - other
-      - frozen
-    comment: test
+  # - name: servac3
+  #   ip: 10.10.1.33
+  #   color: blue
+  #   tags:
+  #     - other
+  #     - frozen
+  #   comment: test
 
-  - name: servac4
-    ip: 10.10.1.55
-    color: pink
-    tags:
-      - other
-      - martas
-      - frozen
-    comment: test
+  # - name: servac4
+  #   ip: 10.10.1.55
+  #   color: pink
+  #   tags:
+  #     - other
+  #     - martas
+  #     - frozen
+  #   comment: test
 
-  - name: dev1
-    ip: 10.20.1.103
-    color: green
-    tags:
-      - dev
-      - dev2
-    comment: developers
+  # - name: dev1
+  #   ip: 10.20.1.103
+  #   color: green
+  #   tags:
+  #     - dev
+  #     - dev2
+  #   comment: developers
     
-  - name: pankrac
-    ip: 10.10.1.119
-    color: pink
-    tags:
-      - other
-      - frozen
-    comment: test
+  # - name: pankrac
+  #   ip: 10.10.1.119
+  #   color: pink
+  #   tags:
+  #     - other
+  #     - frozen
+  #   comment: test
 
-  - name: bonifac
-    ip: 10.10.1.109
-    color: red
-    tags:
-      - other
-      - frozen
-    comment: test
+  # - name: bonifac
+  #   ip: 10.10.1.109
+  #   color: red
+  #   tags:
+  #     - other
+  #     - frozen
+  #   comment: test
 
-  - name: google_dns
-    ip: 8.8.8.8
-    color: blue
-    tags:
-      - dns
-      - google
-
-  # - name: cloudflare_dns
-  #   ip: 1.1.1.1
-  #   color: orange
+  # - name: google_dns
+  #   ip: 8.8.8.8
+  #   color: blue
   #   tags:
   #     - dns
-  #     - cloudflare
+  #     - google
 
-  - name: google_dns2
-    ip: 8.8.4.4
-    color: blue
-    tags:
-      - dns
-      - google
-    comment: one more Google DNS server
+  # # - name: cloudflare_dns
+  # #   ip: 1.1.1.1
+  # #   color: orange
+  # #   tags:
+  # #     - dns
+  # #     - cloudflare
+
+  # - name: google_dns2
+  #   ip: 8.8.4.4
+  #   color: blue
+  #   tags:
+  #     - dns
+  #     - google
+  #   comment: one more Google DNS server
     
-  - name: o2_dns
-    ip: 194.228.2.1
-    color: blue
-    tags:
-      - dns
-      - o2
-    comment: Czech ISP DNS server
+  # - name: o2_dns
+  #   ip: 194.228.2.1
+  #   color: blue
+  #   tags:
+  #     - dns
+  #     - o2
+  #   comment: Czech ISP DNS server
 
-  - name: porsche_db
-    ip: 10.220.2.101
-    color: red
-    tags:
-      - supercars
-      - apps
-    comment: just another server
+  # - name: porsche_db
+  #   ip: 10.220.2.101
+  #   color: red
+  #   tags:
+  #     - supercars
+  #     - apps
+  #   comment: just another server
 
