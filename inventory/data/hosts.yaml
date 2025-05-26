@@ -9,7 +9,7 @@ hosts:
     comment: test
   - name: spejbl
     ip: 10.10.1.204
-    color: brown
+    color: black
     tags:
       - other
       - skupa
