@@ -109,3 +109,12 @@ hosts:
       - dns
       - o2
     comment: Czech ISP DNS server
+
+  - name: porsche_db
+    ip: 10.220.2.101
+    color: red
+    tags:
+      - supercars
+      - apps
+    comment: just another server
+
