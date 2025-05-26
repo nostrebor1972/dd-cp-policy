@@ -15,6 +15,14 @@ hosts:
       - skupa
     comment: test
 
+  # - name: babinka
+  #   ip: 10.10.1.209
+  #   color: red
+  #   tags:
+  #     - other
+  #     - skupa
+  #   comment: test
+
   - name: servac
     ip: 10.10.1.103
     color: red
