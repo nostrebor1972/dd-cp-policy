@@ -115,41 +115,41 @@ apps:
   #         - net_expense_frontend
 
 
-  - name: "cyclo-eshop"
-    services:
-      - name: "web"
-        services:
-          - https
-        scope:
-          - net_cyclo_web
-        consumers:
-          - Any
-
-      - name: "backend"
-        services:
-          - https
-          - http
-        scope:
-          - net_cyclo_db
-        consumers:
-          - net_cyclo_web
-
-  # - name: "supercars-eshop"
+  # - name: "cyclo-eshop"
   #   services:
   #     - name: "web"
   #       services:
   #         - https
   #       scope:
-  #         - net_supercars_web
+  #         - net_cyclo_web
   #       consumers:
-  #         - feed-supercars-dealers
+  #         - Any
 
   #     - name: "backend"
   #       services:
   #         - https
   #         - http
   #       scope:
-  #         - net_supercars_db
-  #         - porsche_db
+  #         - net_cyclo_db
   #       consumers:
-  #         - net_supercars_web
+  #         - net_cyclo_web
+
+  # # - name: "supercars-eshop"
+  # #   services:
+  # #     - name: "web"
+  # #       services:
+  # #         - https
+  # #       scope:
+  # #         - net_supercars_web
+  # #       consumers:
+  # #         - feed-supercars-dealers
+
+  # #     - name: "backend"
+  # #       services:
+  # #         - https
+  # #         - http
+  # #       scope:
+  # #         - net_supercars_db
+  # #         - porsche_db
+  # #       consumers:
+  # #         - net_supercars_web
