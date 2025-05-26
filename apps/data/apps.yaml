@@ -94,25 +94,25 @@ apps:
   #       consumers:
   #         - net-100
 
-  - name: "expense_tracker"
-    services:
-      - name: "frontend"
-        services:
-          - https
-          - http
-        scope:
-          - net_expense_frontend
-        consumers:
-          - Any
+  # - name: "expense_tracker"
+  #   services:
+  #     - name: "frontend"
+  #       services:
+  #         - https
+  #         - http
+  #       scope:
+  #         - net_expense_frontend
+  #       consumers:
+  #         - Any
 
-      - name: "backend"
-        services:
-          - https
-          - http
-        scope:
-          - net_expense_backend
-        consumers:
-          - net_expense_frontend
+  #     - name: "backend"
+  #       services:
+  #         - https
+  #         - http
+  #       scope:
+  #         - net_expense_backend
+  #       consumers:
+  #         - net_expense_frontend
 
 
   - name: "cyclo-eshop"
@@ -133,3 +133,23 @@ apps:
           - net_cyclo_db
         consumers:
           - net_cyclo_web
+
+  # - name: "supercars-eshop"
+  #   services:
+  #     - name: "web"
+  #       services:
+  #         - https
+  #       scope:
+  #         - net_supercars_web
+  #       consumers:
+  #         - feed-supercars-dealers
+
+  #     - name: "backend"
+  #       services:
+  #         - https
+  #         - http
+  #       scope:
+  #         - net_supercars_db
+  #         - porsche_db
+  #       consumers:
+  #         - net_supercars_web

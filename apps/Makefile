@@ -1,6 +1,6 @@
 
 
-export CHECKPOINT_SESSION_NAME := TF $(shell date) $(shell hostname)
+export CHECKPOINT_SESSION_NAME := TF App $(shell date) $(shell hostname)
 export CHECKPOINT_SESSION_DESCRIPTION := Terraform session description
 
 apply:
