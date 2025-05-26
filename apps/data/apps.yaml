@@ -93,6 +93,7 @@ apps:
   #         - servac
   #       consumers:
   #         - net-100
+
   - name: "expense_tracker"
     services:
       - name: "frontend"
@@ -103,6 +104,7 @@ apps:
           - net_expense_frontend
         consumers:
           - Any
+
       - name: "backend"
         services:
           - https
@@ -111,3 +113,23 @@ apps:
           - net_expense_backend
         consumers:
           - net_expense_frontend
+
+
+  - name: "cyclo-eshop"
+    services:
+      - name: "web"
+        services:
+          - https
+        scope:
+          - net_cyclo_web
+        consumers:
+          - Any
+
+      - name: "backend"
+        services:
+          - https
+          - http
+        scope:
+          - net_cyclo_db
+        consumers:
+          - net_cyclo_web
