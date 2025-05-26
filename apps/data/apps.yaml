@@ -1,14 +1,14 @@
 
 apps:
-  # - name: cars
-  #   services:
-  #     - name: "publicweb"
-  #       services:
-  #         - https
-  #       scope:
-  #         - net_cars_publicweb
-  #       consumers:
-  #         - Any
+  - name: cars
+    services:
+      - name: "publicweb"
+        services:
+          - https
+        scope:
+          - net_cars_publicweb
+        consumers:
+          - Any
 
   #     - name: test
   #       services:

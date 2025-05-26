@@ -7,7 +7,14 @@ hosts:
       - other
       - skupa
     comment: test
-    
+  - name: spejbl
+    ip: 10.10.1.204
+    color: brown
+    tags:
+      - other
+      - skupa
+    comment: test
+
   - name: servac
     ip: 10.10.1.103
     color: red
