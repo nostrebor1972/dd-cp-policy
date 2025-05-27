@@ -20,7 +20,7 @@ apps:
           - net_expense_web
         consumers:
           - Any
-          
+
       - name: "backend"
         services:
           - https
@@ -29,6 +29,7 @@ apps:
           - net_expense_db
         consumers:
           - net_expense_web
+          
 
   #     - name: test
   #       services:
