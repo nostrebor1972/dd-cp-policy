@@ -9,6 +9,9 @@ locals {
 }
 
 resource "checkpoint_management_network" "networks" {
+
+  ignore_warnings = true
+
   for_each = { for network in local.networks : network.name => network }
 
   name         = each.value.name
