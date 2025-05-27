@@ -56,13 +56,13 @@ hosts:
   #     - frozen
   #   comment: test
 
-  # - name: dev1
-  #   ip: 10.20.1.103
-  #   color: green
-  #   tags:
-  #     - dev
-  #     - dev2
-  #   comment: developers
+  - name: dev1
+    ip: 10.20.1.103
+    color: green
+    tags:
+      - dev
+      - dev2
+    comment: developers
     
   # - name: pankrac
   #   ip: 10.10.1.119
