@@ -16,13 +16,13 @@ hosts:
       - skupa
     comment: test
 
-  - name: spejbl2
-    ip: 10.10.1.204
-    color: black
-    tags:
-      - other
-      - skupa
-    comment: test
+  # - name: spejbl2
+  #   ip: 10.10.1.204
+  #   color: black
+  #   tags:
+  #     - other
+  #     - skupa
+  #   comment: test
 
 
   # - name: babinka
