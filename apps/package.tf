@@ -6,7 +6,17 @@ resource "checkpoint_management_package" "app" {
   access            = true
 }
 
+
+resource "checkpoint_management_access_section" "misc" {
+
+  name     = "misc"
+  position = { top = "top" }
+  layer    = "${checkpoint_management_package.app.name} Network"
+}
+
 resource "checkpoint_management_access_section" "app" {
+
+  depends_on = [checkpoint_management_access_section.misc]
 
   for_each = local.apps
 
