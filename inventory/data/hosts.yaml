@@ -10,7 +10,7 @@ hosts:
 
   - name: spejbl
     ip: 10.10.1.204
-    color: black
+    color: red
     tags:
       - other
       - skupa
