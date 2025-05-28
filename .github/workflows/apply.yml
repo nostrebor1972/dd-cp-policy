@@ -28,18 +28,21 @@ jobs:
         with:
           terraform_version: 'latest'
 
-      - name: Terraform init inventory
-        run: |
-          cd inventory
-          ../scripts/tfinit.sh
+      # - name: Terraform init inventory
+      #   run: |
+      #     cd inventory
+      #     ../scripts/tfinit.sh
 
-      - name: Terraform apply inventory
-        run: cd inventory; ../scripts/apply.sh
+      # - name: Terraform apply inventory
+      #   run: cd inventory; ../scripts/apply.sh
         
-      - name: Publish policy
+      # - name: Publish policy
+      #   run: |
+      #     cd inventory; ../scripts/publish.sh
+      - name: INVENTORY POLICY make
         run: |
-          cd inventory; ../scripts/publish.sh
-      
+          cd inventory; make
+
       - name: APP POLICY make
         run: |
           cd apps; make

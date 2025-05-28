@@ -7,6 +7,7 @@ hosts:
       - other
       - skupa
     comment: test
+
   - name: spejbl
     ip: 10.10.1.204
     color: black
@@ -14,6 +15,15 @@ hosts:
       - other
       - skupa
     comment: test
+
+  - name: spejbl2
+    ip: 10.10.1.204
+    color: black
+    tags:
+      - other
+      - skupa
+    comment: test
+
 
   # - name: babinka
   #   ip: 10.10.1.209
