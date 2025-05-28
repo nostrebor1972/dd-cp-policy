@@ -10,25 +10,25 @@ apps:
         consumers:
           - Any
 
-  - name: expense
-    services:
-      - name: "frontend"
-        services:
-          - https
-          - http
-        scope:
-          - net_expense_web
-        consumers:
-          - Any
+  # - name: expense
+  #   services:
+  #     - name: "frontend"
+  #       services:
+  #         - https
+  #         - http
+  #       scope:
+  #         - net_expense_web
+  #       consumers:
+  #         - Any
 
-      - name: "backend"
-        services:
-          - https
-          - MS-SQL-Server
-        scope:
-          - net_expense_db
-        consumers:
-          - net_expense_web
+  #     - name: "backend"
+  #       services:
+  #         - https
+  #         - MS-SQL-Server
+  #       scope:
+  #         - net_expense_db
+  #       consumers:
+  #         - net_expense_web
           
 
   #     - name: test
