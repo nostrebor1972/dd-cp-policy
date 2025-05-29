@@ -30,7 +30,16 @@ apps:
         consumers:
           - net_expense_web
           
-
+  - name: ebike
+    services:
+      - name: "frontend"
+        services:
+          - https
+          - http
+        scope:
+          - net_ebike_web
+        consumers:
+          - Any
   #     - name: test
   #       services:
   #         - https
