@@ -40,6 +40,14 @@ apps:
           - net_ebike_web
         consumers:
           - Any
+      - name: "backend"
+        services:
+          - https
+        scope:
+          - net_ebike_app
+        consumers:
+          - net_ebike_web     
+          
   #     - name: test
   #       services:
   #         - https
