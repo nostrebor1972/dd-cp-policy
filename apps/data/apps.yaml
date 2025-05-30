@@ -10,6 +10,16 @@ apps:
   #       consumers:
   #         - Any
 
+  - name: devops-app
+    services:
+      - name: "public_website"
+        services:
+          - https
+        scope:
+          - net_devops_pub
+        consumers:
+          - Any
+
   - name: expense
     services:
       - name: "frontend"
