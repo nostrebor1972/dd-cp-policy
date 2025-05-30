@@ -17,7 +17,7 @@ resource "checkpoint_management_host" "hosts" {
   ipv4_address = each.value.ip
 
   color = each.value.color
-  tags  = concat(each.value.tags, ["terraform"])
+  tags  = concat(each.value.tags, ["terraform", "MadeByTF"])
 
   comments = lookup(each.value, "comment", null)
 }
