@@ -28,6 +28,8 @@ apps:
           - net_devops_backend
         consumers:
           - net_devops_pub
+          - LocalMachine
+          - feed-books
 
   # - name: expense
   #   services:
