@@ -1,12 +1,12 @@
 
 hosts:
-  - name: hurvinek
-    ip: 10.10.1.203
-    color: yellow
-    tags:
-      - other
-      - skupa
-    comment: test
+  # - name: hurvinek
+  #   ip: 10.10.1.203
+  #   color: yellow
+  #   tags:
+  #     - other
+  #     - skupa
+  #   comment: test
 
   - name: spejbl
     ip: 10.10.1.204
@@ -113,12 +113,12 @@ hosts:
   #     - dns
   #     - google
 
-  # - name: cloudflare_dns
-  #   ip: 1.1.1.1
-  #   color: orange
-  #   tags:
-  #     - dns
-  #     - cloudflare
+  - name: cloudflare_dns
+    ip: 1.1.1.1
+    color: orange
+    tags:
+      - dns
+      - cloudflare
 
   # - name: google_dns2
   #   ip: 8.8.4.4
