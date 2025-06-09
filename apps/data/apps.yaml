@@ -31,6 +31,28 @@ apps:
           - LocalMachine
           # - NonSense
 
+  - name: garmin-app
+    services:
+      - name: "garmin-frontend"
+        services:
+          - https
+          - http
+        scope:
+          - net_garmin_web
+        consumers:
+          - Any
+          
+      - name: "garmin-backend"
+        services:
+          - https
+          - MS-SQL-Server
+        scope:
+          - net_garmin_app
+        consumers:
+          - net_garmin_web
+          # - NonSense
+
+
   # - name: expense
   #   services:
   #     - name: "frontend"
