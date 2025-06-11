@@ -1,12 +1,12 @@
 
 hosts:
-  # - name: hurvinek
-  #   ip: 10.10.1.203
-  #   color: yellow
-  #   tags:
-  #     - other
-  #     - skupa
-  #   comment: test
+  - name: hurvinek
+    ip: 10.10.1.203
+    color: yellow
+    tags:
+      - other
+      - skupa
+    comment: test
 
   - name: spejbl
     ip: 10.10.1.204
@@ -24,13 +24,13 @@ hosts:
       - skupa
     comment: test
 
-  - name: zeryk
-    ip: 10.10.1.144
-    color: black
-    tags:
-      - other
-      - skupa
-    comment: test
+  # - name: zeryk
+  #   ip: 10.10.1.144
+  #   color: black
+  #   tags:
+  #     - other
+  #     - skupa
+  #   comment: test
   
   # - name: zeryk2
   #   ip: 10.10.1.145
