@@ -1,5 +1,27 @@
 
 apps:
+
+  - name: harry_poter_eshop
+    services:
+      - name: "publicweb"
+        services:
+          - https
+        scope:
+          - net_harry_web
+        consumers:
+          - Any
+# net_harry_app_tier
+      - name: "app tier"
+        services:
+          - https
+          - MS-SQL-Server
+        scope:
+          - net_harry_app_tier
+        consumers:
+          - net_harry_web
+
+
+
   - name: cars
     services:
       - name: "publicweb"
