@@ -1,5 +1,26 @@
 
 apps:
+  - name: scooter_eshop
+    services:
+      - name: front-end
+        services:
+          - https
+          - http
+        scope:
+          - net_scooter_pub
+        consumers:
+          - Any
+# net_harry_app_tier
+      - name: "app tier"
+        services:
+          - https
+          - MS-SQL-Server
+        scope:
+          - net_scooter_app
+        consumers:
+          - net_scooter_pub
+
+
 
   - name: harry_poter_eshop
     services:
