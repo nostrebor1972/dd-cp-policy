@@ -32,22 +32,22 @@ hosts:
       - skupa
     comment: test
   
-  - name: zeryk2
-    ip: 10.10.1.145
-    color: orange
-    tags:
-      - other
-      - skupa
-    comment: test    
-
-
-  # - name: babinka
-  #   ip: 10.10.1.209
-  #   color: red
+  # - name: zeryk2
+  #   ip: 10.10.1.145
+  #   color: orange
   #   tags:
   #     - other
   #     - skupa
-  #   comment: test
+  #   comment: test    
+
+
+  - name: babinka
+    ip: 10.10.1.209
+    color: red
+    tags:
+      - other
+      - skupa
+    comment: test
 
   # - name: servac
   #   ip: 10.10.1.103
