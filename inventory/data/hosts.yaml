@@ -16,17 +16,17 @@ hosts:
       - skupa
     comment: test
 
-  # - name: manicka
-  #   ip: 10.10.1.219
-  #   color: red
-  #   tags:
-  #     - other
-  #     - skupa
-  #   comment: test
+  - name: manicka
+    ip: 10.10.1.219
+    color: red
+    tags:
+      - other
+      - skupa
+    comment: test
 
   - name: zeryk
     ip: 10.10.1.144
-    color: brown
+    color: black
     tags:
       - other
       - skupa
@@ -84,7 +84,7 @@ hosts:
 
   - name: dev1
     ip: 10.20.1.103
-    color: green
+    color: light green
     tags:
       - dev
       - dev2

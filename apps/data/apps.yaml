@@ -1,45 +1,67 @@
 
 apps:
-  - name: scooter_eshop
+  - name: magic_app
     services:
       - name: front-end
         services:
           - https
           - http
         scope:
-          - net_scooter_pub
+          - net_magic_front
         consumers:
           - Any
-# net_harry_app_tier
-      - name: "app tier"
-        services:
-          - https
-          - MS-SQL-Server
-        scope:
-          - net_scooter_app
-        consumers:
-          - net_scooter_pub
+
+      # - name: backend-systems
+      #   services:
+      #     - https
+      #     - http
+      #     - MS-SQL-Server
+      #     - ssh
+      #   scope:
+      #     - net_magic_back
+      #   consumers:
+      #     - net_magic_front
+
+#   - name: scooter_eshop
+#     services:
+#       - name: front-end
+#         services:
+#           - https
+#           - http
+#         scope:
+#           - net_scooter_pub
+#         consumers:
+#           - Any
+# # net_harry_app_tier
+#       - name: "app tier"
+#         services:
+#           - https
+#           - MS-SQL-Server
+#         scope:
+#           - net_scooter_app
+#         consumers:
+#           - net_scooter_pub
 
 
 
-  - name: harry_poter_eshop
-    services:
-      - name: "publicweb"
-        services:
-          - https
-        scope:
-          - net_harry_web
-        consumers:
-          - Any
-# net_harry_app_tier
-      - name: "app tier"
-        services:
-          - https
-          - MS-SQL-Server
-        scope:
-          - net_harry_app_tier
-        consumers:
-          - net_harry_web
+#   - name: harry_poter_eshop
+#     services:
+#       - name: "publicweb"
+#         services:
+#           - https
+#         scope:
+#           - net_harry_web
+#         consumers:
+#           - Any
+# # net_harry_app_tier
+#       - name: "app tier"
+#         services:
+#           - https
+#           - MS-SQL-Server
+#         scope:
+#           - net_harry_app_tier
+#         consumers:
+#           - net_harry_web
 
 
 
