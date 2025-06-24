@@ -1,12 +1,11 @@
 
 apps:
-  - name: magic123_app
+  - name: magic345_app
     services:
       - name: front-end
         services:
           - https
           - http
-          - ftp
         scope:
           - net_magic_front
         consumers:
