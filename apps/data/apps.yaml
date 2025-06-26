@@ -6,7 +6,6 @@ apps:
         services:
           - https
           - http
-          - ftp
         scope:
           - net_magic_front
         consumers:
