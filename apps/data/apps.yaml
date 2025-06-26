@@ -1,6 +1,6 @@
 
 apps:
-  - name: magic444_app
+  - name: magic_app
     services:
       - name: front-end
         services:
